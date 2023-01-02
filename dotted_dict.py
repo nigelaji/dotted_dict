@@ -1,3 +1,7 @@
+import warnings
+from copy import deepcopy
+
+
 class List(list):
     def __mul__(self, value: int):
         lis = []
@@ -142,3 +146,4 @@ def compress(nested, lost=None):
     for _locs, v in deconstruct_dict(nested):
         compress_map.update(locs_join(_locs, v))
     return compress_map
+
